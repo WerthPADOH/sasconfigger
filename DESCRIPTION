@@ -1,0 +1,20 @@
+Package: sasconfigger
+Type: Package
+Title: Generate config files for SAS projects
+Version: 0.1.0
+Author: Nathan Werth [aut, cre]
+Maintainer: Nathan Werth <nwerth@pa.gov>
+Description: Reads in SAS program files and creates copies of them with macro
+    variables for "configurable" values (resource file paths, passwords, etc.).
+    Two additional files will be created: a configuration file that sets these
+    values, and a "project master" program to run the project.
+Depends:
+    R (>= 3.0.0)
+Imports:
+    shiny (>= 0.13.1),
+    stringi (>= 1.0.1)
+License: MIT
+LazyData: TRUE
+Suggests:
+    testthat
+RoxygenNote: 5.0.1
