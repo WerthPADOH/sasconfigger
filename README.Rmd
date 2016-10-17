@@ -1,0 +1,27 @@
+---
+output:
+  md_document:
+    variant: markdown_github
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# sasconfigger
+
+`r packageDescription('sasconfigger', fields = 'Title')`
+
+## Description
+
+`r packageDescription('sasconfigger', fields = 'Description')`
+
+## Requirements
+
+```{r, results='asis'}
+packages <- packageDescription('sasconfigger', fields = c('Depends', 'Imports'))
+split_names <- unlist(strsplit(unlist(packages), '\n'))
+split_names <- split_names[nzchar(split_names)]
+split_names <- gsub(',', '', split_names)
+cat(paste('-', split_names), sep = '\n')
+```
